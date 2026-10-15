@@ -8,6 +8,8 @@ response.
 This is a local simulation for educational purposes only. It does not connect
 to or resolve real internet websites.
 
+To Watch the video on youtube [click here](https://youtu.be/RUMT98RRLb8)
+
 ## Services
 
 | Service | Purpose | Host port |
