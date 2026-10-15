@@ -1,0 +1,22 @@
+services:
+  dns:
+    build: .
+    image: building-the-internet:local
+    command: ["python", "-u", "dns/server.py"]
+    ports:
+      - "5000:5000/udp"
+    restart: unless-stopped
+
+  google:
+    image: building-the-internet:local
+    command: ["uvicorn", "google:app", "--host", "0.0.0.0", "--port", "8000"]
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+
+  facebook:
+    image: building-the-internet:local
+    command: ["uvicorn", "facebook:app", "--host", "0.0.0.0", "--port", "8001"]
+    ports:
+      - "8001:8001"
+    restart: unless-stopped
